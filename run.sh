@@ -19,6 +19,10 @@ update_upgrade() {
     sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y
 }
 
+remove_clean() {
+    sudo apt autoremove -y && sudo apt autoclean -y
+}
+
 update_upgrade
 
 disable_locks
