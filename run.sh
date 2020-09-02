@@ -11,6 +11,9 @@ disable_locks() {
     sudo rm /var/cache/apt/archives/lock
 }
 
+enable_locks() {
+    sudo dpkg --configure -a
+}
 
 
 disable_locks
