@@ -15,7 +15,14 @@ enable_locks() {
     sudo dpkg --configure -a
 }
 
+update_upgrade() {
+    sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y
+}
+
+update_upgrade
 
 disable_locks
+
+update_upgrade
 
 programs_to_remove
