@@ -8,6 +8,10 @@ programs_to_install_with_apt() {
     ./programs_to_install_with_apt.sh
 }
 
+programs_to_install_with_snap() {
+    ./programs_to_install_with_snap.sh
+}
+
 disable_locks() {
     sudo rm /var/lib/apt/lists/lock
     sudo rm /var/lib/dpkg/lock
@@ -42,6 +46,8 @@ update_upgrade
 remove_clean
 
 programs_to_install_with_apt
+
+programs_to_install_with_snap
 
 for program in programs/*.sh; do
     ./$program
