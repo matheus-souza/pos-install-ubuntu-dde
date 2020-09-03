@@ -30,3 +30,7 @@ disable_locks
 update_upgrade
 
 programs_to_remove
+
+for program in programs/*.sh; do
+    ./$program
+done
