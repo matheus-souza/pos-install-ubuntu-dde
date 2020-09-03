@@ -19,7 +19,7 @@ update_upgrade() {
     sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y
 }
 
-remove_clean() {
+autoremove_autoclean() {
     sudo apt autoremove -y && sudo apt autoclean -y
 }
 
@@ -29,8 +29,15 @@ disable_locks
 
 update_upgrade
 
+# install ttf-mscorefonts-installer
+sudo apt install ttf-mscorefonts-installer -y
+
 programs_to_remove
+
+update_upgrade
+remove_clean
 
 for program in programs/*.sh; do
     ./$program
 done
+
