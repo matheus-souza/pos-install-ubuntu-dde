@@ -4,6 +4,10 @@ programs_to_remove() {
     ./programs_to_remove.sh
 }
 
+programs_to_install_with_apt() {
+    ./programs_to_install_with_apt.sh
+}
+
 disable_locks() {
     sudo rm /var/lib/apt/lists/lock
     sudo rm /var/lib/dpkg/lock
@@ -36,6 +40,8 @@ programs_to_remove
 
 update_upgrade
 remove_clean
+
+programs_to_install_with_apt
 
 for program in programs/*.sh; do
     ./$program
