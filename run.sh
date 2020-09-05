@@ -53,3 +53,7 @@ for program in programs/*.sh; do
     ./$program
 done
 
+update_upgrade
+remove_clean
+enable_locks
+
