@@ -9,6 +9,7 @@ APT_PROGRAMAS=(
     gimp
     curl
     inkscape
+    vim
 )
 
 for program in ${APT_PROGRAMAS[@]}; do
