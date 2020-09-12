@@ -43,7 +43,7 @@ sudo apt install ttf-mscorefonts-installer -y
 programs_to_remove
 
 update_upgrade
-remove_clean
+autoremove_autoclean
 
 programs_to_install_with_apt
 
@@ -54,6 +54,6 @@ for program in programs/*.sh; do
 done
 
 update_upgrade
-remove_clean
+autoremove_autoclean
 enable_locks
 
