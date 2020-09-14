@@ -14,8 +14,8 @@ wget -P ~/.config/sublime-text-3/Installed\ Packages/ https://packagecontrol.io/
 
 wget -P ~/.config/sublime-text-3/Packages/User/ https://gist.githubusercontent.com/matheus-souza/4881c35588d50f99ebe5651958003f66/raw/304bea15f1c499c4d6bd51116c346d81289175ea/Package%2520Control.sublime-settings
 
-wget -P ~/Downloads/ https://gist.githubusercontent.com/matheus-souza/4881c35588d50f99ebe5651958003f66/raw/304bea15f1c499c4d6bd51116c346d81289175ea/Package%2520Control.sublime-settings
-
 wget -P ~/.config/sublime-text-3/Packages/User/ https://gist.githubusercontent.com/matheus-souza/0641e9fcfb84cccab8c20148224729b9/raw/b3becf6621df144687e0e8f321f4ae832fba7d8b/Preferences.sublime-settings
+
+wget -P ~/Downloads/ https://gist.githubusercontent.com/matheus-souza/0641e9fcfb84cccab8c20148224729b9/raw/b3becf6621df144687e0e8f321f4ae832fba7d8b/Preferences.sublime-settings
 
 subl --command start &
