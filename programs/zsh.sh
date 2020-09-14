@@ -1,17 +1,19 @@
 #!/bin/bash
 
-sudo apt install -y zsh
+sudo apt install -y zsh curl
 
 chsh -s $(which zsh)
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-process_id=$!
-git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
-
-wait $process_id
-
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" && \
+git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" && \
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+
+#fazer teste com &&
+
+#process_id=$!
+
+#wait $process_id
+
 
 sed -i 's/robbyrussell/spaceship/g' ~/.zshrc
 
@@ -37,6 +39,7 @@ EOT
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
 
+#fazer teste com && depois de download
 # sed "/cdef/aline1\nline2\nline3\nline4" input.txt
 # sed "/### End of ZInit's installer chunk/azinit light zdharma/fast-syntax-highlighting\nzinit light zsh-users/zsh-autosuggestions\nzinit light zsh-users/zsh-completions" ~/.zshrc
 
