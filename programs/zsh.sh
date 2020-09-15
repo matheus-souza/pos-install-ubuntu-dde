@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt install -y zsh curl
+sudo apt install -y zsh curl git
 
 chsh -s $(which zsh)
 
