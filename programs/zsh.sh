@@ -5,6 +5,8 @@ sudo apt install -y zsh curl git
 chsh -s $(which zsh)
 
 #process_id=$!
+#https://unix.stackexchange.com/questions/124106/shell-script-wait-for-background-command
+#https://linuxhint.com/wait_command_linux/
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" &
 wait $!
 
