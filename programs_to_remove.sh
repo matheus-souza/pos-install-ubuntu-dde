@@ -36,6 +36,7 @@ PROGRAMS_TO_REMOVE=(
     libreoffice-writer
     
     gnome-screenshot
+    gnome-calculator
     
     gnome-2048
     gnome-chess
