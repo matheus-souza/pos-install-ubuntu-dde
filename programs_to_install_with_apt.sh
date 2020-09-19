@@ -4,6 +4,7 @@ APT_PROGRAMAS=(
     git
     git-flow
     deepin-screen-recorder
+    deepin-calculator
     ubuntu-restricted-extras
     unrar
     gimp
