@@ -4,25 +4,17 @@ sudo apt install -y zsh curl git
 
 chsh -s $(which zsh)
 
-#process_id=$!
-#https://unix.stackexchange.com/questions/124106/shell-script-wait-for-background-command
-#https://linuxhint.com/wait_command_linux/
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" &
-wait $!
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" &
-wait $!
+curl -o - https://raw.githubusercontent.com/denysdovhan/spaceship-zsh-theme/master/install.zsh | zsh
 
-ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+#ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 
 #fazer teste com &&
 
 #process_id=$!
 
 #wait $process_id
-
-
-sed -i 's/robbyrussell/spaceship/g' ~/.zshrc
 
 cat <<EOT >> ~/.zshrc
 SPACESHIP_PROMPT_ORDER=(
@@ -44,12 +36,15 @@ SPACESHIP_CHAR_SYMBOL="❯"
 SPACESHIP_CHAR_SUFFIX=" "
 EOT
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
+sed -i 's/robbyrussell/spaceship/g' ~/.zshrc
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)" &
+PID=$!
 
 #fazer teste com && depois de download
 # sed "/cdef/aline1\nline2\nline3\nline4" input.txt
 # sed "/### End of ZInit's installer chunk/azinit light zdharma/fast-syntax-highlighting\nzinit light zsh-users/zsh-autosuggestions\nzinit light zsh-users/zsh-completions" ~/.zshrc
-
+wait $PID
 sed "/^### End of Zinit's installer chunk$/r"<(
     echo "zinit light zdharma/fast-syntax-highlighting"
     echo "zinit light zsh-users/zsh-autosuggestions"
