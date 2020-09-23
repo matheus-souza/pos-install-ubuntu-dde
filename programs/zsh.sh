@@ -6,7 +6,9 @@ chsh -s $(which zsh)
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-curl -o - https://raw.githubusercontent.com/denysdovhan/spaceship-zsh-theme/master/install.zsh | zsh
+source ~/.zshrc
+
+git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1 && ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 
 #ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 
@@ -15,6 +17,8 @@ curl -o - https://raw.githubusercontent.com/denysdovhan/spaceship-zsh-theme/mast
 #process_id=$!
 
 #wait $process_id
+
+exit 0
 
 cat <<EOT >> ~/.zshrc
 SPACESHIP_PROMPT_ORDER=(
