@@ -18,7 +18,7 @@ git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/theme
 
 #wait $process_id
 
-exit 0
+#exit 0
 
 cat <<EOT >> ~/.zshrc
 SPACESHIP_PROMPT_ORDER=(
@@ -53,5 +53,5 @@ sed "/^### End of Zinit's installer chunk$/r"<(
     echo "zinit light zdharma/fast-syntax-highlighting"
     echo "zinit light zsh-users/zsh-autosuggestions"
     echo "zinit light zsh-users/zsh-completions"
-    echo "\n"
+    echo -e "\n"
 ) -i -- ~/.zshrc
