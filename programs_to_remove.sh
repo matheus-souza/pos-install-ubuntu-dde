@@ -45,6 +45,9 @@ PROGRAMS_TO_REMOVE=(
     gnome-terminal
     gnome-terminal-data
     
+    onboard
+    onboard-common
+    
 )
 
 for program_name in ${PROGRAMS_TO_REMOVE[@]}; do
