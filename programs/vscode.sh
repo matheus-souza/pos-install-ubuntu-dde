@@ -42,3 +42,5 @@ code --install-extension streetsidesoftware.code-spell-checker-portuguese-brazil
 wget https://gist.githubusercontent.com/matheus-souza/403a803e224de02742a072ca809a0df0/raw/b7c2c3ab4dbe8374a7c7f6b7e50589b3a41fef45/vscode.settings.json -O ~/.config/Code/User/settings.json
 
 sudo rm -f /etc/apt/sources.list.d/vscode.list
+
+xdg-mime default dde-file-manager.desktop inode/directory application/x-gnome-saved-search
