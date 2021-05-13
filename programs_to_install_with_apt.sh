@@ -8,6 +8,8 @@ APT_PROGRAMAS=(
     ubuntu-restricted-extras
     unrar
     gimp
+    language-pack-gnome-pt
+    language-pack-gnome-pt-base
     curl
     inkscape
     vim
