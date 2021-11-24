@@ -18,6 +18,7 @@ code --install-extension bierner.markdown-checkbox
 code --install-extension bierner.markdown-emoji
 code --install-extension bierner.markdown-preview-github-styles
 code --install-extension bierner.markdown-yaml-preamble
+code --install-extension christian-kohler.path-intellisense
 code --install-extension codezombiech.gitignore
 code --install-extension CoenraadS.bracket-pair-colorizer-2
 code --install-extension DavidAnson.vscode-markdownlint
@@ -30,14 +31,21 @@ code --install-extension isudox.vscode-jetbrains-keybindings
 code --install-extension mathiasfrohlich.Kotlin
 code --install-extension mikestead.dotenv
 code --install-extension ms-azuretools.vscode-docker
+code --install-extension MS-CEINTL.vscode-language-pack-pt-BR
 code --install-extension ms-python.python
+code --install-extension ms-python.vscode-pylance
+code --install-extension ms-toolsai.jupyter
+code --install-extension ms-toolsai.jupyter-keymap
+code --install-extension ms-toolsai.jupyter-renderers
 code --install-extension ms-vsliveshare.vsliveshare
 code --install-extension naumovs.color-highlight
 code --install-extension PKief.material-icon-theme
+code --install-extension rebornix.ruby
 code --install-extension ritwickdey.LiveServer
 code --install-extension shd101wyy.markdown-preview-enhanced
 code --install-extension streetsidesoftware.code-spell-checker
 code --install-extension streetsidesoftware.code-spell-checker-portuguese-brazilian
+code --install-extension wingrunr21.vscode-ruby
 
 wget https://gist.githubusercontent.com/matheus-souza/403a803e224de02742a072ca809a0df0/raw/b7c2c3ab4dbe8374a7c7f6b7e50589b3a41fef45/vscode.settings.json -O ~/.config/Code/User/settings.json
 
