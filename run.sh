@@ -57,3 +57,5 @@ update_upgrade
 autoremove_autoclean
 enable_locks
 
+gsettings set org.freedesktop.ibus.panel.emoji unicode-hotkey "@as []"
+
