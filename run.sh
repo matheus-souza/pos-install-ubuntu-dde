@@ -12,6 +12,10 @@ programs_to_install_with_snap() {
     ./programs_to_install_with_snap.sh
 }
 
+configure_rm_unused_snaps() {
+    ./configure_rm_unused_snaps.sh
+}
+
 disable_locks() {
     sudo rm /var/lib/apt/lists/lock
     sudo rm /var/lib/dpkg/lock
@@ -59,3 +63,4 @@ enable_locks
 
 gsettings set org.freedesktop.ibus.panel.emoji unicode-hotkey "@as []"
 
+configure_rm_unused_snaps
